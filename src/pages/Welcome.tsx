@@ -12,7 +12,8 @@ import {
   setLocalUser,
   startLocalSession,
 } from '@/lib/session';
-import MySmartBasketLogo from "@/assets/MySmartBasketLogoBig.png"
+
+const logoUrl = `${import.meta.env.BASE_URL}MySmartBasketLogoBig.png`;
 
 function AuthDialog({ mode, onDone }: { mode: 'login' | 'register'; onDone: () => void }) {
   const [loginIdentifier, setLoginIdentifier] = useState('');
@@ -221,7 +222,7 @@ export default function Welcome() {
           <div className="flex-1 w-full bg-black text-white px-4 sm:px-8 py-4 sm:py-8 flex flex-col items-center justify-center shadow-card rounded-none">
             <div className="w-20 h-20 sm:w-40 sm:h-40 rounded-[20px] bg-black flex items-center justify-center">
               <img
-                src={MySmartBasketLogo}
+                src={logoUrl}
                 alt="MySmartBasket logo"
                 className="w-16 h-16 sm:w-32 sm:h-32 object-contain"
               />
